@@ -13,10 +13,8 @@ function getText() {
 
 function getJson() {
   fetch("post.json")
-    .then(function (res) {
-      return res.json();
-    })
-    .then(function (data) {
+    .then((res) => res.json())
+    .then((data) => {
       let output = "";
       data.forEach(function (post) {
         output += `
@@ -28,9 +26,7 @@ function getJson() {
       });
       document.getElementById("output").innerHTML = output;
     })
-    .catch(function (err) {
-      console.log(err);
-    });
+    .catch((err) => console.log(err));
 }
 
 function getAPI() {
