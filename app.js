@@ -31,10 +31,8 @@ function getJson() {
 
 function getAPI() {
   fetch("https://api.github.com/users")
-    .then(function (res) {
-      return res.json();
-    })
-    .then(function (data) {
+    .then((res) => res.json())
+    .then((data) => {
       let output = "";
       data.forEach(function (user) {
         output += `
@@ -46,7 +44,5 @@ function getAPI() {
       });
       document.getElementById("output").innerHTML = output;
     })
-    .catch(function (err) {
-      console.log(err);
-    });
+    .catch((err) => console.log(err));
 }
