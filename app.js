@@ -16,7 +16,7 @@ function getJson() {
     .then((res) => res.json())
     .then((data) => {
       let output = "";
-      data.forEach(function (post) {
+      data.forEach((post) => {
         output += `
           <ul>
             <li>${post.title}</li>
@@ -34,7 +34,7 @@ function getAPI() {
     .then((res) => res.json())
     .then((data) => {
       let output = "";
-      data.forEach(function (user) {
+      data.forEach((user) => {
         output += `
           <div>
             <label for="user">${user.login}</label>
